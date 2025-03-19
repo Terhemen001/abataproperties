@@ -1,40 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">RealEstate</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
+  <!-- Loader Section -->
+  <div class="loader">
+    <img src="images/AB 1 (6).jpg" alt="Logo">
+  </div>
+ 
 
-    <section class="hero"> 
-        <h1>Welcome to RealEstate</h1>
-        <p>Your dream home is just a click away.</p>
-        <a href="projects.html" class="cta">Explore Projects</a>
-    </section>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <img src="images/AB_1__6_-removebg-preview.png" alt="Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="properties.html">Properties</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
 
-    <footer>
-        <p>&copy; 2023 RealEstate. All rights reserved.</p>
-    </footer>
+  
+ <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+      <h1 id="typing-text"></h1>
+      <p>Get your own land now</p>
+      <a href="properties.html" class="btn">Explore Properties</a>
+    </div>
+  </section>
 
-    <script src="scripts/script.js"></script>
+  <!-- What We Do Section -->
+  <section class="what-we-do">
+    <h2>What We Do</h2>
+    <div class="services">
+      <div class="service">
+        <i class="fas fa-home"></i>
+        <h3>Property Sales</h3>
+        <p>We help you find the perfect home for your family.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-building"></i>
+        <h3>Property Management</h3>
+        <p>We manage properties to ensure they remain in top condition.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-handshake"></i>
+        <h3>Consultation</h3>
+        <p>We provide expert advice on real estate investments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties Section -->
+  <section class="properties" id="properties">
+    <h2>Featured Properties</h2>
+    <div class="property-list">
+      <div class="property-card">
+        <img src="images/Blueskys.jpeg" alt="Property 1">
+        <h3>EPE (OKEGUN)</h3>
+        <p>Dry and plain land</p>
+        <p>N8,000,000 per plot</p>
+        <p>N4,000,000 per half plot</p>
+      </div>
+      <div class="property-card">
+        <img src="images/farm field.jpeg" alt="Property 2">
+        <h3>OWODE IDIROKO</h3>
+        <p>Along a tarred road</p>
+        <p>N100,000 per plot</p>
+        <p>N500,000 per plot</p>
+      </div>
+      <div class="property-card">
+        <img src="images/farm.png" alt="Property 3">
+        <h3>OWODE ILARO ROAD</h3>
+        <p>land ownership plus agric business</p>
+        <p>N600,000 per plot</p>
+        <p>N300,000 per plot</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team Section -->
+  <section class="team">
+    <h2>Meet the Team</h2>
+    <div class="team-members">
+      <div class="member">
+        <img src="images/WhatsApp Image 2025-03-17 at 4.31.33 PM.jpeg" alt="Team Member 1">
+        <h3>Kate Ijechi Adebayo</h3>
+        <p>CEO/MD</p>
+      </div>
+      <div class="member">
+        <img src="images/WhatsApp Image 2025-03-17 at 10.15.08 PM.jpeg" alt="Team Member 2">
+        <h3>Asihai Emeka</h3>
+        <p>Sales/marketing Manager</p>
+      </div>
+      <div class="member">
+        <img src="images/WhatsApp Image 2025-03-17 at 7.37.00 PM.jpeg" alt="Team Member 3">
+        <h3>Emmanuel Omoh Ekhaobomhe</h3>
+        <p>Admin Manager</p>
+        <a href="about.html"><img src="images/arrow-circle-right.png"></a>
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- Carousel Section -->
+  <section class="carousel">
+    <h2>Our Properties</h2>
+    <div class="slides">
+      <img src="images/Blueskys.jpeg" alt="Property 1">
+      <img src="images/Blueskys.jpeg" alt="Property 2">
+      <img src="images/Blueskys.jpeg" alt="Property 3">
+      <img src="images/Blueskys.jpeg" alt="Property 4">
+      <img src="images/Blueskys.jpeg" alt="Property 5">
+      <img src="images/Blueskys.jpeg" alt="Property 6">
+
+      <a href="properties.html"><img src="images/arrow-circle-right.png"></a>
+    </div>
+  
+
+  </section>
+
+  <!-- WhatsApp Icon -->
+<a href="https://wa.me/09075328722" class="whatsapp-icon" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+
+   <!-- Contact Us Section -->
+   <section class="contact-us">
+    <h2>Contact Us</h2>
+    <p>07061359962, 08056454970, 07033804199</p>
+    <p>3, Ikola-Ajasa, Command, Ipaja, Lagos State</p>
+    <p>abatapropertiesltd.com</p>
+    <p>Info@abatapropertiesltd</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2025 Real Estate. All rights reserved.</p>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>

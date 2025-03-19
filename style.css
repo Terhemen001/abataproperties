@@ -3,129 +3,553 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0a192f;
-    color: #ffffff;
-}
-header {
-    background-color: #112240;
-    padding: 1rem 2rem;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  /* Navigation Bar */
+
+ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #64ffda;
-}
-
-.nav-links {
-    list-style: none;
+    padding: 10px 20px;
+    background-color: teal;
+    color: white;
+  }
+  
+  
+  .logo img {
+    height: 98px;
+  }
+  
+  .nav-links {
+    list-style:none;
     display: flex;
-    gap: 1rem;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    justify-content: flex-end;
-}
-
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #64ffda;
-}
-
-.menu-toggle {
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration:none;
+    font-family:montserrat;
+  }
+  
+  .hamburger {
     display: none;
-    flex-direction: column;
+    font-size: 24px;
     cursor: pointer;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #ffffff;
-    margin: 4px 0;
-}
-
-/* Move navigation links to the right */
-header {
-    justify-content: flex-start; /* Align logo to the left */
-}
-
-.nav-links {
-    margin-left: auto; /* Push nav-links to the right */
-}
-
-
+  }
+  
+  
+ /* Hero Section */
 .hero {
-    height: 80vh;
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-image: url('images/Ariel\ field.png'); /* Add your background image here */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('asset/images/WhatsApp\ Image\ 2025-03-13\ at\ 4.58.34\ PM.jpeg');
-    background-size: cover;
-    background-position: center;
-}
-
-.hero h1 {
+    color: whitesmoke;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.cta {
-    padding: 0.8rem 2rem;
-    background-color: #64ffda;
-    color: #0a192f;
+    margin-bottom: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: #333;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-family: lato;
+  }
+  
+  .hero .btn {
+    padding: 10px 20px;
+    background-color: teal;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.cta:hover {
-    background-color: #52d1b2;
-}
-
-footer {
+    font-size: 0.8rem;
+  }
+  
+  /* What We Do Section */
+  .what-we-do {
+    padding: 50px 20px;
     text-align: center;
-    padding: 1rem;
-    background-color: #112240;
-    margin-top: 2rem;
-}
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .service {
+    width: 30%;
+    margin: 20px 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .service i {
+    font-size: 2rem;
+    color: teal;
+  }
+  
+  /* Properties Section */
 
-/* Mobile Styles */
-@media (max-width: 768px) {
+  .properties h2{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .properties {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .property-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .property-card {
+    width: 30%;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .property-card h3 {
+    margin: 10px 0;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .property-card p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  /* Meet the Team Section */
+  .team {
+    padding: 50px 20px;
+    text-align: center;
+    background-color:teal;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .member {
+    width: 30%;
+    margin: 20px 0;
+  }
+  
+  .member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .member a img {
+    transform: scale(0.3);
+
+  }
+
+  .member h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .member p{
+    font-family: monospace;
+  }
+  
+  /* Carousel Section */
+  .carousel {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .carousel h2{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .carousel a img{
+    transform: scale(0.1);
+    padding-bottom: 0.2rem;
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .slides img {
+    scroll-snap-align: start;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  /* Footer Section */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: teal;
+    color: white;
+  }
+  
+  .social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #112240;
-        position: absolute;
-        top: 60px;
-        right: 0;
+      display: none;
+      flex-direction: column;
+      width: 100%;
     }
-
+  
     .nav-links.active {
-        display: flex;
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .service, .property-card, .member {
+      width: 100%;
     }
 
-    .menu-toggle {
-        display: flex;
+  }
+
+
+  /* About Us Page */
+.about-us {
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .about-us p {
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+  }
+  
+  /* Services Page */
+  .services-page {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  /* Properties Page */
+  .properties-page {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  /* Contact Us Page */
+  .contact-us {
+    padding: 70px 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+
+  
+  .contact-us form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-us input, .contact-us textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .contact-us button {
+    padding: 10px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .foot-size{
+    margin-top:245px;
+  }
+
+ /* Loader Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Match your theme color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of everything */
+  }
+  
+  .loader img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    animation: spin 2s linear infinite; /* Spinning animation */
+  }
+  
+  /* Spinning Animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
     }
-}
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Hide Loader When Page Loads */
+  .loader.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
 
 
+ /* WhatsApp Icon Styles */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Changed from left to right */
+    background-color: #25d366; /* WhatsApp green */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pop 2s infinite; /* Popping animation */
+    z-index: 1000; /* Ensure it's on top of everything */
+  }
+  
+  /* Popping Animation */
+  @keyframes pop {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+ /* Hover Effect */
+  .whatsapp-icon:hover {
+    background-color: #128c7e; /* Darker WhatsApp green*/
+    animation: none; /* Stop animation on hover */
+  }
+
+  /* Navigation Bar Hover Effect */
+.nav-links a {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffdd57;
+    transform: translateY(-3px);
+  }
+  
+  /* Hero Section Button Hover Effect */
+  .hero .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+  }
+  
+  /* What We Do Section Hover Effect */
+  .service {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Properties Section Hover Effect */
+  .property-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Meet the Team Section Hover Effect */
+  .member {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Carousel Section Hover Effect */
+  .slides img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .slides img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer Section Hover Effect */
+  .social-media a {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-media a:hover {
+    color: #ffdd57;
+    transform: translateY(-3px);
+  }*/
 
 
-
+  /* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation Classes */
+  .fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 1s ease-out;
+  }
+  
+  .slide-in-up {
+    animation: slideInUp 1s ease-out;
+  }
+  
+  /* Initially hide sections *
+  section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  /* Show sections when they come into view *
+  section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }

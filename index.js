@@ -4,10 +4,10 @@
 window.addEventListener('load', function () {
     const loader = document.querySelector('.loader');
   
-    // Delay hiding the loader for 2 seconds
+    // Delay hiding the loader for 1 seconds
     setTimeout(function () {
       loader.classList.add('hide');
-    }, 2000); // 2000 milliseconds = 3 seconds
+    }, 1000); // 1000 milliseconds = 1 seconds
   });
 
  

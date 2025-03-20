@@ -61,6 +61,19 @@ const observer = new IntersectionObserver((entries, observer) => {
   });
 }, options);
 
+// Function to toggle bio visibility
+function toggleBio(id) {
+  const fullBio = document.getElementById(`bio-${id}`);
+  const shortBio = fullBio.previousElementSibling;
+
+  if (fullBio.style.display === "none" || fullBio.style.display === "") {
+    fullBio.style.display = "block"; // Show full bio
+    shortBio.style.display = "none"; // Hide short bio
+  } else {
+    fullBio.style.display = "none"; // Hide full bio
+    shortBio.style.display = "block"; // Show short bio
+  }
+}
 // Observe all sections
 sections.forEach((section) => {
   observer.observe(section);

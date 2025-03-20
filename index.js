@@ -61,6 +61,12 @@ const observer = new IntersectionObserver((entries, observer) => {
   });
 }, options);
 
+// Observe all sections
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+
 // Function to toggle bio visibility
 function toggleBio(id) {
   const fullBio = document.getElementById(`bio-${id}`);
@@ -74,8 +80,4 @@ function toggleBio(id) {
     shortBio.style.display = "block"; // Show short bio
   }
 }
-// Observe all sections
-sections.forEach((section) => {
-  observer.observe(section);
-});
 

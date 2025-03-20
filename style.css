@@ -162,44 +162,71 @@ body {
   }
   
   /* Meet the Team Section */
-  .team {
-    padding: 50px 20px;
-    text-align: center;
-    background-color:teal;
-    font-family:'Times New Roman', Times, serif;
-  }
-  
-  .team-members {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
+.team {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.member {
+  width: 30%;
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.member h3 {
+  margin: 10px 0 5px;
+}
+
+.member p {
+  margin: 5px 0;
+  color: teal;
+  font-weight: bold;
+}
+
+.short-bio {
+  margin: 10px 0;
+}
+
+.full-bio {
+  display: none; /* Hide full bio by default */
+  margin: 10px 0;
+  text-align: left;
+}
+
+.read-more, .read-less {
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.read-more:hover, .read-less:hover {
+  background-color: #128c7e;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
   .member {
-    width: 30%;
-    margin: 20px 0;
+    width: 100%;
   }
-  
-  .member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .member a img {
-    transform: scale(0.3);
-
-  }
-
-  .member h3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-
-  .member p{
-    font-family: monospace;
-  }
-  
+}
   /* Carousel Section */
   .carousel {
     padding: 50px 20px;

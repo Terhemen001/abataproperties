@@ -590,5 +590,6 @@ body {
 .arrow-right::after {
   content: url('images/arrow.png');
   margin-left: 10px; /* adjust the margin to your liking */
+  transfrom: scale(0.3);
 }
 

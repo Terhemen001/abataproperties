@@ -587,3 +587,7 @@ body {
   align-items: center;
 }
 
+.no-underline{
+    text-decoration: none;
+}
+

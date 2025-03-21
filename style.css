@@ -568,18 +568,18 @@ body {
     animation: slideInUp 1s ease-out;
   }
   
-  /* Initially hide sections */
+  /* Initially hide sections *
   section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
   }
   
-  /* Show sections when they come into view */
+  /* Show sections when they come into view *
   section.in-view {
     opacity: 1;
     transform: translateY(0);
-  }
+  }*/
 
 
 

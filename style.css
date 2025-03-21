@@ -582,12 +582,5 @@ body {
   }
 
 
-.arrow-right {
-  display: flex;
-  align-items: center;
-}
 
-.no-underline{
-    text-decoration: none;
-}
 

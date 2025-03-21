@@ -568,15 +568,27 @@ body {
     animation: slideInUp 1s ease-out;
   }
   
-  /* Initially hide sections *
+  /* Initially hide sections */
   section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
   }
   
-  /* Show sections when they come into view *
+  /* Show sections when they come into view */
   section.in-view {
     opacity: 1;
     transform: translateY(0);
   }
+
+
+.arrow-right {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-right::after {
+  content: url('images/arrow.png');
+  margin-left: 10px; /* adjust the margin to your liking */
+}
+

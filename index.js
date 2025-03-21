@@ -81,3 +81,16 @@ function toggleBio(id) {
   }
 }
 
+// Function to update the year in the footer
+function updateYear() {
+  const yearElement = document.getElementById('current-year');
+  if (yearElement) {
+    const currentYear = new Date().getFullYear(); // Get the current year
+    yearElement.textContent = currentYear; // Update the year in the footer
+  }
+}
+
+// Call the function when the page loads
+window.onload = updateYear;
+
+

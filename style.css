@@ -119,6 +119,12 @@ body {
     font-size: 2rem;
     color: teal;
   }
+
+  .video-container{
+      display: block;
+      margin: auto;
+      width: fit-content;
+  }
   
   /* Properties Section */
 

@@ -124,6 +124,7 @@ body {
       display: block;
       margin: auto;
       width: fit-content;
+      margin-left: 10px;
   }
   
   /* Properties Section */

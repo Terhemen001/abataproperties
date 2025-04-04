@@ -120,13 +120,6 @@ body {
     color: teal;
   }
 
-  .video-container{
-      display: block;
-      margin: auto;
-      width: fit-content;
-      margin-left: 10px;
-  }
-  
   /* Properties Section */
 
   .properties h2{
